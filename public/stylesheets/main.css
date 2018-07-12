@@ -1,7 +1,14 @@
+
+
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	font-family: Raleway;
 }
-
 
 .thumbnail a img {
 	object-fit: cover;
@@ -34,4 +41,14 @@ body {
 
 #alerts {
 	margin-top: 80px;
+}
+
+#main-container {
+	margin-bottom: 40px;
+}
+
+.jumbotron {
+	margin: 0;
+	padding-top: 16px;
+	padding-bottom: 16px;
 }
