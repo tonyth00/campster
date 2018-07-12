@@ -16,7 +16,7 @@ var geocoder = NodeGeocoder(options);
 
 router.get("/", function(req, res) {
 	//Get all campgrounds from DB
-	Campground.find({}, function(err, allCampgrounds) {
+	Campground.find().sort({name: "ascending"}).exec(function(err, allCampgrounds) {
 		if (err) {
 			console.log(err);
 		} else {
