@@ -19,13 +19,13 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next) {
 				
 			} else {
 				req.flash("error", "Campground not found");
-				res.redirect("back");
+				res.redirect("/campgrounds");
 			}
 		});
 
 	} else {
 		req.flash("error", "You need to be logged in to do that");
-		res.redirect("back");
+		res.redirect("/campgrounds/" + req.params.id);
 	}
 };
 
@@ -36,7 +36,8 @@ middlewareObj.checkCommentOwnership = function(req, res, next) {
 				if (comment.author.id.equals(req.user._id)) {
 					next();
 				} else {
-					res.redirect("back");
+					req.flash("error", "You don't have permission to do that");
+					res.redirect("/campgrounds/" + req.params.id);
 				}
 
 			} else {
@@ -46,7 +47,7 @@ middlewareObj.checkCommentOwnership = function(req, res, next) {
 		});
 	} else {
 		req.flash("error", "You need to be logged in to do that");
-		res.redirect("back");
+		res.redirect("/campgrounds/" + req.params.id);
 	}
 }
 
