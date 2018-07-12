@@ -1,17 +1,19 @@
 <% include ./partials/header.ejs %>
 
 <div class="row">
-    <h1 style="text-align: center">Sign Up</h1>
-    <div style="width: 30%; margin: 25px auto;">
+    <h1 style="text-align: center">Create a Campster Account</h1>
+    <div style="margin: 25px auto; float: none;" class="col-md-4 col-sm-5 col-xs-10">
         <form action="/register" method="post">
             <div class="form-group">
-                <input class="form-control" type="text" name="username" placeholder="username">
+                <label>Username</label>
+                <input class="form-control" type="text" name="username" placeholder="eg. John">
             </div>
             <div class="form-group">
-                <input class="form-control" type="password" name="password" placeholder="password">
+                <label>Password</label>
+                <input class="form-control" type="password" name="password" placeholder="********">
             </div>
             <div class="form-group">
-                <button class="btn btn-lg btn-primary btn-block">Sign Up!</button>
+                <button class="btn btn-lg btn-primary btn-block">Create New Account</button>
             </div>
         </form>
         <p>Already have an account? <a href="/login">Login here</a></p>

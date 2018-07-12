@@ -1,7 +1,7 @@
 <% include ../partials/header.ejs %>
 
 	<div class="row">
-		<div class="col-md-3">
+		<div class="col-sm-4">
 			<p class="lead">Campster</p>
 
 			<div class="list-group">
@@ -15,7 +15,7 @@
 
 		</div>
 
-		<div class="col-md-9">
+		<div class="col-sm-8">
 			<div class=thumbnail>
 				<img class="img-responsive" src="<%= campground.image %>">
 				<div class="caption">
@@ -80,7 +80,7 @@
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 8,
         center: center,
-        scrollwheel: false
+        scrollwheel: true
     });
     var contentString = `
       <strong><%= campground.name %><br />
