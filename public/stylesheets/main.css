@@ -3,15 +3,14 @@ body {
 }
 
 
-.thumbnail img {
+.thumbnail a img {
 	object-fit: cover;
 	width: 100%;
-	height: 250px;
+	height: 200px;
 }
 
 .thumbnail {
 	padding: 0;
-
 }
 
 .delete-form {
@@ -27,4 +26,8 @@ body {
 
 #brand {
   font-weight: bold;
+}
+
+.bg-info a {
+	color: black;
 }

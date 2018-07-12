@@ -28,7 +28,7 @@ router.post("/register", function(req, res) {
 		} else {
 			//If registered successfully, authenticate user and create session
 			passport.authenticate("local")(req, res, function() {
-				req.flash("success", "Welcome to YelpCamp, " + user.username + "!");
+				req.flash("success", "Welcome to Campster, " + user.username + "!");
 				res.redirect("/campgrounds");
 			});
 		}
