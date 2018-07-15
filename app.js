@@ -19,11 +19,12 @@ var commentRoutes 		= require("./routes/comments.js"),
 
 //www.mlabs.com
 //mongoose.connect("mongodb://user:password1@ds263380.mlab.com:63380/yelpcamp");
+//mongoose.connect("mongodb://localhost:27017/yelp_camp");
 mongoose.connect(process.env.DATABASE_URL);
 //process.env.databaseURL
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public")); //for stylesheets
 app.use(methodOverride("_method"));
 app.use(flash());
 //seedDB(); //seed the database
