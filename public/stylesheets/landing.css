@@ -86,3 +86,7 @@ h1 {
 .no-cssanimations .slideshow li {
 	opacity: 1;
 }
+
+footer i {
+  font-size: 24px;
+}
