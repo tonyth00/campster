@@ -2,15 +2,31 @@ var express = require("express");
 var router = express.Router();
 var passport = require("passport");
 var User = require("../models/user.js");
+var fs = require("fs");
 
 // root route
 router.get("/", function(req, res) {
 	res.render("landing.ejs");
 });
 
-// abotu route 
+// about route 
 router.get("/about", function(req, res) {
 	res.render("about.ejs", {page: "about"})
+});
+
+//resume route
+router.get("/resume", function(req, res) {
+	var filePath = "pdf/resume.pdf";
+	fs.readFile(filePath, function (err, data) {
+		if (!err) {
+			res.contentType("application/pdf");
+			res.send(data);
+		} else {
+			console.log(err);
+			res.redirect("/about");
+		}
+		
+  	});
 });
 
 //AUTH ROUTES
