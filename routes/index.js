@@ -8,6 +8,11 @@ router.get("/", function(req, res) {
 	res.render("landing.ejs");
 });
 
+// abotu route 
+router.get("/about", function(req, res) {
+	res.render("about.ejs", {page: "about"})
+});
+
 //AUTH ROUTES
 
 router.get("/register", function(req, res) {
